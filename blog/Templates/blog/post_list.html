@@ -11,15 +11,14 @@
 <h3>Autor: Strefa Kursów</h3>
 <h4>Wszelkie prawa zastrzeżone</h4>
 </div>
-<p>To jest akapit</p>
-<em>To jest wyróżniony tekst</em><br>
-<strong>To jest pogrubiony tekst</strong>
-<a href="https://strefakursow.pl">LINK</a>
-<ul>
-    <li>elementy listy</li>
-     <li>elementy listy</li>
-     <li>elementy listy</li>
-</ul>
+    {% for post in posts %}
+
+<div>
+<p>opublikownay: {{ post.publish_date}}</p>
+    <h2><a href=""> {{post.title}} </a></h2>
+    <em>{{ post.text|linebreaksbr }}</em>
+</div>
+{% endfor %}
 
 </body>
 </html>
